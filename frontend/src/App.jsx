@@ -8,8 +8,6 @@ import DashboardPage from "./pages/DashboardPage";
 import ForgotPasswordPage from "./pages/ForgotPasswordPage";
 import ResetPasswordPage from "./pages/ResetPasswordPage";
 
-import LoadingSpinner from "./components/LoadingSpinner";
-
 import { Toaster } from "react-hot-toast";
 import { useAuthStore } from "./store/authStore";
 import { useEffect } from "react";
@@ -44,8 +42,6 @@ function App() {
 	useEffect(() => {
 		checkAuth();
 	}, [checkAuth]);
-
-	if (isCheckingAuth) return <LoadingSpinner />;
 
 	return (
 		<div
